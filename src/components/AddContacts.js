@@ -10,14 +10,15 @@ export default class AddContacts extends Component {
             email: this.refs.email.value
         }
 
+        console.log(contact)
         fetch("http://localhost:8080/api/contacts",{
             method: "POST",
-            header:{
-                "content-type": "application/json"
+            headers:{
+                "Content-Type": "application/json",
             },
             body: JSON.stringify(contact),
         })
-            .then(response => response.json());
+        .then(response => response.json());
         window.location.reload();
     }
 

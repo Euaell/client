@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import Contacts from "./components/Contacts";
 
 function App() {
